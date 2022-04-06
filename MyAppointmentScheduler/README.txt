@@ -1,5 +1,5 @@
 Appointment Scheduler Version 1
-Used to schedule appointments with associated contacts and customers.
+Used to schedule appointments with a contact and customer associated with each appointment.
 
 1. Upon launching program you will be prompted with a login screen, login with correct credentials.
 
