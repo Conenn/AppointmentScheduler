@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #68b0ad;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomersController">
+   <children>
+      <TableView fx:id="customersTableView" layoutX="45.0" layoutY="122.0" prefHeight="457.0" prefWidth="911.0">
+        <columns>
+          <TableColumn fx:id="customerIdCol" prefWidth="156.0" text="Customer ID" />
+          <TableColumn fx:id="customerNameCol" prefWidth="108.0" text="Name" />
+            <TableColumn fx:id="customerAddressCol" minWidth="0.0" prefWidth="146.0" text="Address" />
+            <TableColumn fx:id="customerZipCol" prefWidth="104.0" text="Zip Code" />
+            <TableColumn fx:id="customerPhoneCol" prefWidth="171.0" text="Phone" />
+            <TableColumn fx:id="customerDivisionIdCol" prefWidth="176.0" text="Division ID" />
+        </columns>
+      </TableView>
+      <Pane layoutY="44.0" prefHeight="5.0" prefWidth="1110.0" style="-fx-background-color: #4b4f4f;" />
+      <Label layoutX="45.0" layoutY="78.0" text="Customers" textFill="WHITE">
+         <font>
+            <Font name="Maiandra GD" size="36.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="521.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionViewCustomers" text="Appointments">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER_LEFT" layoutX="956.0" layoutY="244.0" prefHeight="335.0" prefWidth="154.0" spacing="40.0">
+         <children>
+            <Button maxWidth="62.0" mnemonicParsing="false" onAction="#onActionAddCustomer" text="Add ">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onActionUpdateCustomer" text="Update">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Button>
+            <Button maxWidth="62.0" mnemonicParsing="false" onAction="#onActionDeleteCustomer" text="Delete">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" />
+         </padding>
+      </VBox>
+      <Label fx:id="deletedCustomerLabel" layoutX="744.0" layoutY="95.0" prefHeight="27.0" prefWidth="212.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
