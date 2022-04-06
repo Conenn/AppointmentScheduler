@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #68b0ad;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Reports">
+   <children>
+      <TableView fx:id="contactScheduleTableView" layoutX="521.0" layoutY="135.0" prefHeight="445.0" prefWidth="574.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" prefWidth="102.0" text="Appointment ID" />
+          <TableColumn fx:id="appointmentTitleCol" prefWidth="85.0" text="Title" />
+            <TableColumn fx:id="appointmentTypeCol" minWidth="0.0" prefWidth="79.0" text="Type" />
+            <TableColumn fx:id="appointmentStartCol" prefWidth="115.0" text="Start Date" />
+            <TableColumn fx:id="appointmentEndCol" prefWidth="111.0" text="End Date" />
+            <TableColumn fx:id="appointmentCustomerIdCol" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Pane layoutY="44.0" prefHeight="5.0" prefWidth="1110.0" style="-fx-background-color: #4b4f4f;" />
+      <Label layoutX="45.0" layoutY="78.0" text="Reports" textFill="WHITE">
+         <font>
+            <Font name="Maiandra GD" size="36.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="521.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionBackToAppointments" text="Back To Appointments">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <ComboBox fx:id="contactComboBox" layoutX="945.0" layoutY="101.0" onAction="#onActionDisplayAppointments" prefWidth="150.0" promptText="Contacts" />
+      <Label layoutX="521.0" layoutY="100.0" text="Choose a Contact to Display Their Schedule">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="allMonthsComboBox" layoutX="225.0" layoutY="135.0" onAction="#onActionTotalByMonth" prefWidth="150.0" promptText="Month" />
+      <ComboBox fx:id="allTypesComboBox" layoutX="45.0" layoutY="135.0" onAction="#onActionTotalByType" prefWidth="150.0" promptText="Type" />
+      <Label layoutX="45.0" layoutY="188.0" text="Total Appointments:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalAppointmentNumber" layoutX="215.0" layoutY="188.0" prefHeight="27.0" prefWidth="303.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="553.0" text="Number of Appointments on a Weekend:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberOfWeekendAppointments" layoutX="375.0" layoutY="553.0" prefHeight="27.0" prefWidth="28.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="weekendAppointmentMessage" layoutX="43.0" layoutY="580.0" prefHeight="27.0" prefWidth="382.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="221.0" fitWidth="246.0" layoutX="43.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Sean/IdeaProjects/MyAppointmentScheduler/src/Utilities/JavaJoke.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="85.0" layoutY="252.0" text="Joke of The Day">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
